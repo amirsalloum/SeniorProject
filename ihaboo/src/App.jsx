@@ -26,6 +26,7 @@ import AdminSetting from './pages/AdminDashboard/AdminSetting/AdminSetting';
 import LoadingPage from './component/LoadingPage';
 
 function App() {
+  console.log("1234");
   return (
     <AuthProvider>
       <BrowserRouter>
