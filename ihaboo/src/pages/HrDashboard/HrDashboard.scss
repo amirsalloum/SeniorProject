@@ -1,0 +1,98 @@
+.dashboard-container {
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    min-height: 100vh; /* Make sure the container takes full viewport height */
+    background-color: #f0f2f5;
+  
+    .notifications-bell {
+      position: relative;
+      display: inline-block;
+  
+      .bell-container {
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px; /* Slightly larger for visibility */
+        height: 60px;
+        background-color: #f5f5f5;
+        border-radius: 50%;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: #e2e2e2;
+        }
+  
+        .bell-icon {
+          font-size: 30px; /* Increase icon size */
+          color: #333;
+        }
+  
+        .unread-count {
+          position: absolute;
+          top: -5px;
+          right: -5px;
+          background-color: red;
+          color: white;
+          border-radius: 50%;
+          padding: 5px;
+          font-size: 12px;
+          width: 20px;
+          height: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+  
+      .notifications-panel {
+        position: absolute;
+        top: 80px; /* Adjusted for the larger bell */
+        right: 0;
+        width: 320px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        z-index: 100;
+  
+        h3 {
+          font-size: 16px;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+  
+        ul {
+          list-style: none;
+          padding: 0;
+          max-height: 200px;
+          overflow-y: auto;
+          border-top: 1px solid #ddd;
+  
+          li {
+            padding: 10px 5px;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+  
+            &.unread {
+              font-weight: bold;
+              background-color: #f9f9f9;
+            }
+  
+            &:hover {
+              background-color: #f1f1f1;
+            }
+  
+            &:last-child {
+              border-bottom: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ensure html and body take up the full viewport height */
+html, body {
+  @apply h-screen m-0 p-0 overflow-hidden;
+}
+
+/* Ensure padding and borders are included in width and height */
+*, *::before, *::after {
+  @apply box-border;
+}
+
+/* Apply the Inter font globally */
+* {
+  @apply font-sans;
+}
+.custom-select-arrow {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="5"><polygon points="0,0 10,0 5,5" style="fill:black"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 10px;
+  appearance: none; /* Remove default dropdown arrow */
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  scrollbar-width: none;
+}

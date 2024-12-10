@@ -1,0 +1,28 @@
+.date-input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer; /* Add pointer cursor to indicate it's clickable */
+  
+    label {
+      font-size: 14px;
+      color: #ffffff; // Same white text color
+      margin-bottom: 5px;
+    }
+  
+    input {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background: #ffffff;
+      font-size: 14px;
+      color: #333;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      appearance: none; // Removes native date picker arrow styles
+      
+      &::placeholder {
+        color: #686868; // Light placeholder color
+      }
+    }
+  }
+  
